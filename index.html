@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>clickGame</title>
+    </head>
+    <body
+    style="background-color: rgb(209, 235, 255);">
+        <div id="app">
+            <div
+             style="
+             position:absolute;
+             font-size: 100px;
+             background-color:rgba(255, 255, 255, 0.793);
+             z-index:10000">
+             タッチ数 : {{ point }}
+            </div>
+            <div
+                v-for="n in 40" :key="n"
+                style="font-size: 100px;
+                position:absolute;
+                border: 5px solid rgba(255, 255, 255, 0.659);
+                border-radius: 50%;
+                padding: 30px;
+                width: 120px;
+                height: 120px;
+                background-color: rgba(98, 218, 255, 0.503);"
+                class="elem1"
+                v-on:mouseover="scatter($event)">
+                    🐟
+            </div>
+            <div
+                v-for="n in 40" :key="n"
+                style="font-size: 100px;
+                position:absolute;
+                border: 5px solid rgba(255, 255, 255, 0.659);
+                border-radius: 50%;
+                padding: 30px;
+                width: 120px;
+                height: 120px;
+                background-color: rgba(98, 218, 255, 0.503);"
+                class="elem1"
+                v-on:mouseover="scatter($event)">
+                    🐠
+            </div>
+            <div
+                v-for="n in 40" :key="n"
+                style="font-size: 100px;
+                position:absolute;
+                border: 5px solid rgba(255, 255, 255, 0.659);
+                border-radius: 50%;
+                padding: 30px;
+                width: 120px;
+                height: 120px;
+                background-color: rgba(98, 218, 255, 0.503);"
+                class="elem1"
+                v-on:mouseover="scatter($event)">
+                    🐡
+            </div>
+            <div
+                style="font-size: 100px; position:absolute;"
+                id="elem2"
+                v-on:click="scatter($event)">
+            </div>
+        </div>
+        <!-- vueを読み込むためのライブラリ(?)読み込み -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="./js/index.js"></script>
+        <!-- component読み込み -->
+        <script src="./js/list-item.js"></script>
+    </body>
+</html>
